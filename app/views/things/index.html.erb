@@ -1,0 +1,19 @@
+<h1>Things</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Owner</th>
+  </thead>
+  <tbody>
+    <% @things.each do |thing| %>
+      <tr>
+        <td><%= thing.name %></td>
+        <td><%= thing.value %></td>
+        <td><%= thing.owner %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @things %>
